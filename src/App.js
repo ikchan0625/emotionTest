@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import create from 'zustand';
+
+
+// set method로 상태 변경 가능
+const useStore = create(set => ({
+  count: 0,
+  increaseCount: () => set(state => ({ count: state.count + 1 })),
+  setThree: (input) => set({ count: input }),
+}));
 
 function App() {
+  const { count, increaseCount, setThree } = useStore();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div>
+  <div className='App'>
+      <div>Zustand ! {count}</div>
+      <button onClick={increaseCount}>+1</button>
+      <button onClick={() => setThree(3)}>set3</button>
     </div>
+  </div>
   );
 }
 
