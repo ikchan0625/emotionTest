@@ -14,7 +14,7 @@ export default function Test() {
   return (
     <>
       <div>이거 잘 받아감? </div>
-
+      sdfsf
       <DivStyle>sdfsdfsdf</DivStyle>
     </>
   );
