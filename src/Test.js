@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 /** @jsxImportSource @emotion/react */
 import { css, jsx } from "@emotion/react";
+// import { FormControlLabel,Checkbox } from "@mui/material";
+
 const DivStyle = styled.div`
   background-color: hotpink;
   font-size: 24px;
@@ -53,6 +55,7 @@ export default function Test() {
       <div css={divStyle2}>Hover to change color.</div>
       <DivStyle>sdfsdfsdf</DivStyle>
       <P>Using P component</P>
+     
     </>
   );
 }
@@ -60,3 +63,5 @@ export default function Test() {
 // 해결 ==>react v.17 엔진이 emotion 과 충돌하는 이슈가 있다고 함.
 // 해결 방법 : /** @jsxImportSource @emotion/react */ 을 추가해주면 된다.
 // import {css} from "@emotion/react" ;
+
+
